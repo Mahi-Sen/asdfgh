@@ -1570,7 +1570,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
             **locals()
         )
     else:
-        cap = f"<b>📂 ʜᴇʀᴇ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ sᴇᴀʀᴄʜ {search}</b>"
+        cap = f"<b><blockquote>🗄️ ꜰɪʟᴇꜱ ꜰᴏʀ {search}</blockquote></b>"
 
     ads, ads_name, _ = await mdb.get_advirtisment()
     ads_text = ""
