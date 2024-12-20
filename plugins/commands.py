@@ -193,7 +193,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data='seeplans')
                         ]] 
                         reply_markup = InlineKeyboardMarkup(buttons)
-                        m=await message.reply_sticker("CAACAgQAAxkBAAEn9_ZmGp1uf1a38UrDhitnjOOqL1oG3gAC9hAAAlC74FPEm2DxqNeOmB4E") 
+                        m=await message.reply_sticker("CAACAgUAAxkBAAEcaRVnZdFxYSgAAZ5YSNKPBW94f6mCBEgAAgQAA8EkMTGJ5R1uC7PIEB4E") 
                         await asyncio.sleep(1)
                         await m.delete()
                         await message.reply_photo(photo=random.choice(START_IMG), caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -221,7 +221,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data='seeplans')
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgQAAxkBAAEn9_ZmGp1uf1a38UrDhitnjOOqL1oG3gAC9hAAAlC74FPEm2DxqNeOmB4E") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAEcaRVnZdFxYSgAAZ5YSNKPBW94f6mCBEgAAgQAA8EkMTGJ5R1uC7PIEB4E") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(photo=random.choice(START_IMG), caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -1013,16 +1013,16 @@ async def top(client, query):
 @Client.on_message(filters.command("refer"))
 async def refer(bot, message):
     btn = [[
-        InlineKeyboardButton('invite link', url=f'https://telegram.me/share/url?url=https://t.me/{bot.me.username}?start=reff_{message.from_user.id}&text=Hello%21%20Experience%20a%20bot%20that%20offers%20a%20vast%20library%20of%20unlimited%20movies%20and%20series.%20%F0%9F%98%83'),
+        InlineKeyboardButton('ɪɴᴠɪᴛᴇ ʟɪɴᴋ', url=f'https://telegram.me/share/url?url=https://t.me/{bot.me.username}?start=reff_{message.from_user.id}&text=Hello%21%20Experience%20a%20bot%20that%20offers%20a%20vast%20library%20of%20unlimited%20movies%20and%20series.%20%F0%9F%98%83'),
         InlineKeyboardButton(f'⏳ {referdb.get_refer_points(message.from_user.id)}', callback_data='ref_point'),
-        InlineKeyboardButton('Close', callback_data='close_data')
+        InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='close_data')
     ]]  
-    m=await message.reply_sticker("CAACAgQAAxkBAAEkt_Rl_7138tgHJdEsqSNzO5mPWioZDgACGRAAAudLcFGAbsHU3KNJUx4E")      
+    m=await message.reply_sticker("CAACAgUAAxkBAAEcaRVnZdFxYSgAAZ5YSNKPBW94f6mCBEgAAgQAA8EkMTGJ5R1uC7PIEB4E")      
     await m.delete()
     reply_markup = InlineKeyboardMarkup(btn)
     await message.reply_photo(
             photo=random.choice(REFER_PICS),
-            caption=f'👋Hay {message.from_user.mention},\n\nHᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʀᴇғғᴇʀᴀʟ ʟɪɴᴋ:\nhttps://t.me/{bot.me.username}?start=reff_{message.from_user.id}\n\nShare this link with your friends, Each time they join,  you will get 10 refferal points and after 100 points you will get 1 month premium subscription.',
+            caption=f'<b>ʜᴀʏ ʏᴏᴜʀ ʀᴇꜰᴇʀ ʟɪɴᴋ:\n\nhttps://telegram.me/{bot.me.username}?start=reff_{query.from_user.id}\n\nꜱʜᴀʀᴇ ᴛʜɪꜱ ʟɪɴᴋ ᴡɪᴛʜ ʏᴏᴜʀ ꜰʀɪᴇɴᴅꜱ, ᴇᴀᴄʜ ᴛɪᴍᴇ ᴛʜᴇʏ ᴊᴏɪɴ, ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 𝟣𝟢 ʀᴇꜰᴇʀʀᴀʟ ᴘᴏɪɴᴛꜱ ᴀɴᴅ ᴀꜰᴛᴇʀ 𝟣𝟢𝟢 ᴘᴏɪɴᴛꜱ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 𝟣 ᴍᴏɴᴛʜ ᴘʀᴇᴍɪᴜᴍ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ.\n\n𝟣 ʀᴇꜰᴇʀ = 𝟣𝟢 ᴘᴏɪɴᴛꜱ</b>',
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
     )
