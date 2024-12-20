@@ -29,6 +29,9 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://hifita1190:Of9OHxgiIJ0
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'My_Tg_files')
 #---------------------------------------------------------------
+#                                 ===LINKS===
+MICL = environ.get("MICL", "https://t.me/Radhe_Krishn_Movies")
+
 #---------------------------------------------------------------
 #----------- There will be channel id add in all these ---------
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))  # set shortner log channel
